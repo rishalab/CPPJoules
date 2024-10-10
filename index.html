@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CPPJoules: An Energy Measurement Tool for CPP</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <!-- <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
+                            <span class="text-highlight"></span><span class="text-bold">CPPJoules</span>
+                        </a>
+                    </h1>
+
+                </div>
+
+                <div class="top-search-box">
+                    <form class="form-inline search-form justify-content-center" action="" method="get">
+                        <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+                        <button type="submit" class="btn search-btn" value="Search"><i
+                                class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+            </div><!--//container-->
+        </header>
+
+        <!-- Main Body -->
+        <div class="doc-wrapper">
+            <div class="container">
+                <!-- Quick Start -->
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Oct 10th,2024</div>
+                </div>
+
+                <!-- Main Body -->
+                <div class="doc-body row">
+                    <!-- Main Body -->
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+
+                            <!-- Tool Description -->
+                            <section id="download-section" class="doc-section">
+                                <h1 class="section-title">CPPJoules - An Energy Measurement Tool for CPP</h1>
+                                <br>
+                                <h3 class="block-title">Tool Description</h3>
+                                <div class="section-block">
+                                    <p>
+                                        <!-- CPPJoules, a dedicated tool designed specifically to measure the energy footprint of a host machine during 
+                                        the execution of a piece of C++ code. CPPJoules leverages the Intel Running Average Power Limit (RAPL) interface,
+                                        a well-established mechanism for reporting energy consumption of different system-on-chip (SoC) power domains -->
+                                        CPPJoules is a energy measurement tool designed to measure the energy
+                                        consumption during the execution of a piece of
+                                        C++ code. CPPJoules leverages the Intel Running Average Power Limit (RAPL)
+                                        interface, Intel Powergadget, Nvidia Management
+                                        Library (NVML) for reporting energy consumption of different system-on-chip
+                                        (SoC) power domains.
+                                    </p>
+                                    <!-- <p style="color: red;">
+                                        <u>Note</u>: The current version of eTagger may have issues on runnning on some architectures of Mac systems.  
+                                    </p>
+                                    <a href="https://github.com/rishalab/eTagger/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a> -->
+                                </div>
+                            </section>
+
+                            <!-- Installation -->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation & Usage</h2>
+
+                                <div id="step1" class="section-block">
+
+                                    <!-- Requirements -->
+                                    <h3 class="block-title" id="requirements">Requirements</h3>
+                                    <div class="code-block">
+                                        <p>
+                                        <ul>
+                                            <li>Intel processors from the Celeron, Pentium, Core i3, i7, i9, and Xeon
+                                                series, featuring the Sandy Bridge or newer architecture.</li>
+                                            <li>Linux distribution Debian based operating system. We have tested on
+                                                Ubuntu 20.04.6 LTS</li>
+                                            <li>The g++ compiler version has to be above v11.0.0. Install from 
+                                                <a class="simple-link" href="https://sourceforge.net/projects/mingw-w64/" target="_blank">
+                                                    here</a>
+                                                </li>
+                                            <li>If on Windows, then PowerGadget v3.6 has to installed. Click <a id="downloadLinkPg" href="https://raw.githubusercontent.com/Shiva9361/CPP_Joules/main/PowerGadget_3.6.msi" target="_blank" class="simple-link">here</a> to install
+                                        </p>
+                                    </div>
+
+                                    <!-- Github -->
+                                    <h3 class="block-title" id="from-github">Github Repo</h3>
+                                    <div class="code-block">
+                                        <p>Our entire codebase is in this Github repo : <span
+                                                class="highlight">https://github.com/rishalab/CPPJoules.git</span>, you
+                                            can either clone or download it to check it.</p>
+                                        <div class="code-container">
+                                            <div class="code" id="codeToCopy1">git clone https://github.com/rishalab/CPPJoules.git</div>
+                                            <button class="copy-button" onclick="copyCode('codeToCopy1')">
+                                                <i class="far fa-clipboard"></i> Copy code
+                                            </button>
+                                        </div>
+                                        <p>For installing the CPP Joules follow the below steps.</p>
+                                    </div>
+
+                                    <!-- Direct Installer Link -->
+                                    <h3 class="block-title" id="from-direct">Direct Installer Link</h3>
+
+                                    <!-- For Linux -->
+                                    <h4 class="block-title" id="from-linux">For Linux</h4>
+                                    <!-- <div class="code-block"> -->
+                                    <ol>
+                                        <li><a id="downloadLinksh"
+                                                href="https://raw.githubusercontent.com/Shiva9361/CPP_Joules/main/installer.sh"
+                                                target="_blank" class="simple-link">Click here to download CPP Joules
+                                                for Linux</a></li>
+                                        <p>The file <span class="highlight">installer.sh</span> will be downloaded.</p>
+
+                                        <li>Now naviagte to the folder where the file <span
+                                                class="highlight">installer.sh</span> has been downloaded .Open that
+                                            folder in you terminal run the command :
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy2">./installer.sh</div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy2')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                            <p>You will be prompted to enter your user password</p>
+                                        </li>
+                                        <li>The library will be installed in /usr/bin</li>
+                                        <li>You have to give read 'r' access to the rapl first ,run this code :
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy3">sudo chmod +r -R /sys/class/powercap/
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy3')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                            <!-- <p>if it still doesn't work ,try this permissions : </p>
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy">
+                                                    sudo chmod +r
+                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj<br>
+                                                    sudo chmod +r
+                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj<br>
+                                                    sudo chmod +r
+                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:1/energy_uj<br>
+                                                    sudo chmod +r
+                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:2/energy_uj<br>
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode()">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div> -->
+                                        </li>
+                                        <li>Check g++ version by running this code:
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy4">
+                                                    g++ --version
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy4')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <p>If the version is less than v11.0 then run the below code : </p>
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy5">
+                                                    sudo apt update<br>
+                                                    sudo apt install g++-13<br>
+                                                    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 60 <br>
+                                                    sudo update-alternatives --config g++
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy5')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        <li>Now create a test.cpp file and copy the below test code : </li>
+                                        <div class="code-container">
+                                            <div class="code" id="codeToCopy6">
+                                                <span style="color:rgb(89,138,67);">//test.cpp</span><br>
+                                                <span style="color:rgb(255, 124, 248);">#include</span><span
+                                                    style="color:rgb(255, 155, 118);">&lt;cppjoules&gt;</span><br>
+                                                <span style="color:rgb(255, 124, 248);">#include</span><span
+                                                    style="color:rgb(255, 155, 118);">&lt;iostream&gt;</span><br>
+                                                <br>
+                                                <span style="color:rgb(87, 171, 255);">int</span><span
+                                                    style="color:rgb(253, 255, 162);"> main</span><span
+                                                    style="color:rgb(255, 213, 59);">(){</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(38, 142, 246);">EnergyTracker</span> <span
+                                                    style="color:rgb(175, 222, 248);">tracker</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.start</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:rgb(89,138,67);">//API
+                                                    Call</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.stop</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.calculate</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.print_energy</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(241, 98, 239);">return</span> <span
+                                                    style="color:rgb(219, 255, 141);">0</span>;<br>
+                                                }
+                                            </div>
+                                            <button class="copy-button" onclick="copyCode('codeToCopy6')">
+                                                <i class="far fa-clipboard"></i> Copy code
+                                            </button>
+                                        </div>
+                                        <li>
+                                            Now compile the code with this code : 
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy7">
+                                                    g++ test.cpp -lCPP_Joules
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy7')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            And run it 
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy8">
+                                                    ./a.exe
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy8')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            You will get the output as :
+                                            <div class="output-container">
+                                                <div class="output" id="outputContent">
+                                                    To be written
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+
+                                    <!-- For Windows -->
+                                    <h4 class="block-title" id="from-windows">For Windows</h4>
+                                    <ol>
+                                        <li><a id="downloadLinkbat"
+                                                href="https://raw.githubusercontent.com/Shiva9361/CPP_Joules/main/installer.bat"
+                                                target="_blank" class="simple-link">Click here to download CPP Joules
+                                                for Windows</a></li>
+                                        <p>The file <span class="highlight">installer.bat</span> will be downloaded.</p>
+                                        <li>Right click on the <span class="highlight">installer.bat</span> file and
+                                            click run as administrator.</li>
+                                        <li>The folder <span class="highlight">cppJoules</span> will be created.</li>
+                                        <li>Now place this cppJoules folder in the same location where your cpp file is
+                                            present.</li>
+                                        <li>Example : </li>
+                                        <ul>
+                                            <li>Create a folder <span class="highlight">testCPPJoules</span> and place
+                                                the above cppJoules folder within it.</li>
+                                            <li>Now create a <span class="highlight">test.cpp</span> file within the
+                                                folder <span class="highlight">testCPPJoules</span> .</li>
+                                            <li>Now you can directly use the header in your cpp file</li>
+                                        </ul>
+                                        <div class="code-container">
+                                            <div class="code" id="codeToCopy9">
+                                                <span style="color:rgb(89,138,67);">//test.cpp</span><br>
+                                                <span style="color:rgb(255, 124, 248);">#include</span><span
+                                                    style="color:rgb(255, 155, 118);">"cppJoules/include/cppJoules.h"</span><br>
+                                                <span style="color:rgb(255, 124, 248);">#include</span><span
+                                                    style="color:rgb(255, 155, 118);">&lt;iostream&gt;</span><br>
+                                                <br>
+                                                <span style="color:rgb(87, 171, 255);">int</span><span
+                                                    style="color:rgb(253, 255, 162);"> main</span><span
+                                                    style="color:rgb(255, 213, 59);">(){</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(38, 142, 246);">EnergyTracker</span> <span
+                                                    style="color:rgb(175, 222, 248);">tracker</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.start</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:rgb(89,138,67);">//API
+                                                    Call</span><br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.stop</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.calculate</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(175, 222, 248);">tracker</span><span
+                                                    style="color:rgb(253, 255, 141);">.print_energy</span><span
+                                                    style="color:rgb(241, 98, 239);">()</span>;<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    style="color:rgb(241, 98, 239);">return</span> <span
+                                                    style="color:rgb(219, 255, 141);">0</span>;<br>
+                                                }
+                                            </div>
+                                            <button class="copy-button" onclick="copyCode('codeToCopy9')">
+                                                <i class="far fa-clipboard"></i> Copy code
+                                            </button>
+                                        </div>
+
+
+                                        <li>Now compile the file with this command :
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy10">
+                                                    g++ test.cpp -lCPP_Joules -L./cppJoules
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy10')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>Then run the executable :
+                                            <div class="code-container">
+                                                <div class="code" id="codeToCopy11">
+                                                    ./a.exe
+                                                </div>
+                                                <button class="copy-button" onclick="copyCode('codeToCopy11')">
+                                                    <i class="far fa-clipboard"></i> Copy code
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>The output
+                                            <div class="output-container">
+                                                <div class="output" id="outputContent">
+                                                    GT<br>
+                                                    IT<br>
+                                                    DRAM<br>
+                                                    Time consumed : <br>
+                                                </div>
+                                            </div>
+                                            <p style="color: red;">
+                                                <u>Note</u> : The g++ compiler version has to be above v11.0.0. Install
+                                                from <a class="simple-link"
+                                                    href="https://sourceforge.net/projects/mingw-w64/"
+                                                    target="_blank">here</a><br>
+                                                <u>Note</u> : If PowerGadget v3.6 is not present, then install from 
+                                                <a id="downloadLinkPg" href="https://raw.githubusercontent.com/Shiva9361/CPP_Joules/main/PowerGadget_3.6.msi" target="_blank" class="simple-link">here</a>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <br>
+                                </div>
+                            </section>
+
+                            <!-- Approach -->
+                            <section id="icons-section" class="doc-section">
+                                <h2 class="section-title">Approach diagram</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>
+                                            <strong>Measurement of Energy</strong>
+                                            <p>
+                                                CPPJoules leverages Intel's RAPL and NVIDIA's NVML libraries to measure
+                                                energy consumption for both the CPU and GPU components. For CPU energy
+                                                measurement, the tool utilizes Intel's RAPL interface, which provides
+                                                detailed energy traces data across various domains, including the CPU
+                                                package, core, uncore, and DRAM. This is achieved through the Powercap
+                                                interface on Linux and Intel Power Gadget on Windows.
+                                            </p>
+                                            <img class="img-fluid" src="workflowdiagram.png" alt="elegant icons" />
+                                            <br>
+                                        </li>
+                                        <div style="height: 20px;"></div>
+                                        <!-- <li>
+                                            <strong>Working of Extension</strong>
+                                            <p>
+
+                                            </p>
+                                            <img class="img-fluid" src="assets/images/demo/eTagger_extension.png"
+                                                alt="elegant icons" />
+                                            <br>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <!-- Code Snippets -->
+                            <section id="feature-section" class="doc-section">
+                                <h2 class="section-title">Code snippet screenshot</h2>
+                                <div class="section-block">
+                                    <ol>
+                                        <h3>
+                                            <li>
+                                                Test code for array concatenation ( in linux )
+                                                <br><br>
+                                                <img class="img-fluid" src="array_concat.png" alt="screenshot" />
+                                            </li>
+                                        </h3>
+                                        <h3>
+                                            <li>
+                                                Test code for bubble sort ( in linux )
+                                                <br><br>
+                                                <img class="img-fluid" src="bubble_sort.png" alt="elegant icons" />
+                                            </li>
+                                        </h3>
+                                    </ol>
+                                </div>
+                            </section>
+
+                            <!-- Goal -->
+                            <section id="uses-section" class="doc-section">
+                                <h2 class="section-title">Goal</h2>
+                                <div class="section-block">
+                                    Helping developers and practitioners to develope energy efficient code in C++
+                                    language.
+                                </div>
+                            </section>
+
+                            <!-- Results -->
+                            <section id="result-section" class="doc-section">
+                                <h2 class="section-title">Results</h2>
+                                <div class="section-block">
+                                    The evaluation experiments have been done on a linux machine to compare CPP Joules
+                                    with Pyjoules
+                                    <strong>
+                                        <a href="https://github.com/Shiva9361/CPP_Joules/tree/website/evaluation" target="_blank" >Results</a>
+                                    </strong>
+                                </div>
+                            </section>
+
+                            <!-- Demo Video -->
+                            <section id="video-section" class="doc-section">
+                                <h2 class="section-title">Demo Video</h2>
+                                <div class="section-block">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="embed-responsive embed-responsive-4by3">
+                                                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/yMKFuvAM-DE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe width="729" height="410" src="https://www.youtube.com/embed/W6yiaXK2rEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe width="729" height="410" src="https://www.youtube.com/embed/eLcOIPiGt_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/GNrJfZ0RCVI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+
+                    <!-- Side Scroll Bar -->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#download-section">Download</a>
+                                <a class="nav-link scrollto" href="#installation-section">Installation & Usage</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#requirements">Requirements</a>
+                                    <a class="nav-link scrollto" href="#from-github">Github Repo</a>
+                                    <a class="nav-link scrollto" href="#from-direct">Direct Installer Link</a>
+                                    <nav class="doc-sub-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#from-linux">Linux</a>
+                                        <a class="nav-link scrollto" href="#from-windows">Windows</a>
+                                    </nav>
+                                </nav>
+                                <a class="nav-link scrollto" href="#icons-section">Approach</a>
+                                <a class="nav-link scrollto" href="#feature-section">Screenshots</a>
+                                <a class="nav-link scrollto" href="#uses-section">Goals</a>
+                                <a class="nav-link scrollto" href="#result-section">Results</a>
+                                <a class="nav-link scrollto" href="#video-section">Demo Video</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+                    <div class="content-holder col-lg-7 col-md-6 col-7">
+                        <div class="content-holder-inner">
+                            <div class="desc">
+                                <h3 class="promo-title">Contributors</h3>
+                                <!-- <p> Rajrupa chattaraj, Sridhar Chimalakonda</p> -->
+                                <p>Person 1, Person 2, Person 3</p>
+                                <!-- <a class="btn btn-cta" href="" target="_blank"><i class="fas fa-external-link-alt"></i> Preprint</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
