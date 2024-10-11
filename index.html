@@ -147,7 +147,10 @@
                                                 class="highlight">installer.sh</span> has been downloaded .Open that
                                             folder in you terminal run the command :
                                             <div class="code-container">
-                                                <div class="code" id="codeToCopy2">./installer.sh</div>
+                                                <div class="code" id="codeToCopy2">
+                                                    chmod +x installer.sh<br>
+                                                    ./installer.sh
+                                                </div>
                                                 <button class="copy-button" onclick="copyCode('codeToCopy2')">
                                                     <i class="far fa-clipboard"></i> Copy code
                                                 </button>
@@ -155,7 +158,7 @@
                                             <p>You will be prompted to enter your user password</p>
                                         </li>
                                         <li>The library will be installed in /usr/bin</li>
-                                        <li>You have to give read 'r' access to the rapl first ,run this code :
+                                        <!-- <li>You have to give read 'r' access to the rapl first ,run this code :
                                             <div class="code-container">
                                                 <div class="code" id="codeToCopy3">sudo chmod +r -R /sys/class/powercap/
                                                 </div>
@@ -163,23 +166,7 @@
                                                     <i class="far fa-clipboard"></i> Copy code
                                                 </button>
                                             </div>
-                                            <!-- <p>if it still doesn't work ,try this permissions : </p>
-                                            <div class="code-container">
-                                                <div class="code" id="codeToCopy">
-                                                    sudo chmod +r
-                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj<br>
-                                                    sudo chmod +r
-                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj<br>
-                                                    sudo chmod +r
-                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:1/energy_uj<br>
-                                                    sudo chmod +r
-                                                    /sys/class/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:2/energy_uj<br>
-                                                </div>
-                                                <button class="copy-button" onclick="copyCode()">
-                                                    <i class="far fa-clipboard"></i> Copy code
-                                                </button>
-                                            </div> -->
-                                        </li>
+                                        </li> -->
                                         <li>Check g++ version by running this code:
                                             <div class="code-container">
                                                 <div class="code" id="codeToCopy4">
@@ -194,9 +181,9 @@
                                             <div class="code-container">
                                                 <div class="code" id="codeToCopy5">
                                                     sudo apt update<br>
-                                                    sudo apt install g++-13<br>
-                                                    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 60 <br>
-                                                    sudo update-alternatives --config g++
+                                                    sudo apt install g++-11<br>
+                                                    <!-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 60 <br>
+                                                    sudo update-alternatives --config g++ -->
                                                 </div>
                                                 <button class="copy-button" onclick="copyCode('codeToCopy5')">
                                                     <i class="far fa-clipboard"></i> Copy code
@@ -257,7 +244,7 @@
                                             And run it 
                                             <div class="code-container">
                                                 <div class="code" id="codeToCopy8">
-                                                    ./a.exe
+                                                    sudo ./a.out
                                                 </div>
                                                 <button class="copy-button" onclick="copyCode('codeToCopy8')">
                                                     <i class="far fa-clipboard"></i> Copy code
@@ -268,7 +255,11 @@
                                             You will get the output as :
                                             <div class="output-container">
                                                 <div class="output" id="outputContent">
-                                                    To be written
+                                                    Time 9.00326 <br>
+                                                    core-0 8386636 <br>
+                                                    nvidia_gpu_0 164299 <br>
+                                                    package-0 66858350 <br>
+                                                    uncore-0 33936 <br>
                                                 </div>
                                             </div>
                                         </li>
@@ -455,7 +446,7 @@
                                     The evaluation experiments have been done on a linux machine to compare CPP Joules
                                     with Pyjoules
                                     <strong>
-                                        <a href="https://github.com/Shiva9361/CPP_Joules/tree/website/evaluation" target="_blank" >Results</a>
+                                        <a href="https://github.com/rishalab/CPPJoules/tree/main/evaluation" target="_blank" >Results</a>
                                     </strong>
                                 </div>
                             </section>
