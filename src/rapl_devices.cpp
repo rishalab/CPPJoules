@@ -145,6 +145,7 @@ std::map<std::string, unsigned long long> RAPLDevice::getEnergy()
 
     if (!Filehandler.is_open())
     {
+      std::cout << "Give read access to" << path << std::endl;
       return energies;
     }
 
