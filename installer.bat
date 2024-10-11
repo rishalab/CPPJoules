@@ -1,5 +1,5 @@
 @echo off
-curl -L0 https://github.com/Shiva9361/CPP_Joules/releases/download/v1.0/CPP_Joules_windows.tar.gz --output "%~dp0CPP_Joules_windows.tar.gz"
+curl -L0 https://github.com/rishalab/CPPJoules/releases/download/v1.0/CPP_Joules_windows.tar.gz --output "%~dp0CPP_Joules_windows.tar.gz"
 cd "%~dp0"
 tar -xvzf "%~dp0CPP_Joules_windows.tar.gz"
 del "%~dp0CPP_Joules_windows.tar.gz"
